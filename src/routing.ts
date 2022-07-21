@@ -2,10 +2,10 @@
 import { Application } from 'express';
 
 // Components
-import routeRoutes from './api/step/route';
+import stepRoutes from './api/step/route';
 
 const routes = (app: Application) => {
-  app.use('/api', routeRoutes);
+  app.use('/api', stepRoutes);
   app.get('/healthcheck', (_, res) => res.status(200).send('OK'));
 };
 
